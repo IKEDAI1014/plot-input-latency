@@ -5,7 +5,7 @@
 - plot.py -> Script to graph input latency data
 
 ## requisite
-- csv file containing data on input latency with no headers and units, separated by commas and line feeds
+- csv file containing data on input latency with no headers and units, separated by line feeds
 - python3.8+
 - pandas module
 - seaborn module
