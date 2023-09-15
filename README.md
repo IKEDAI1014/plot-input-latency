@@ -3,11 +3,11 @@
 
 ## Contents
 - [violinplot.py](violinplot.py) -> Script to graph input latency data with violinplot  
-![preview_violinplot]("OW2 Frame Limiter RTSS vs in-game_violinplot.png")
+![preview_violinplot](preview_violinplot.png)
 - [histgraph_step.py](histgraph_step.py) -> Script to graph input latency data with histgraph in step mode  
-![preview_step]("OW2 Frame Limiter RTSS vs in-game_histgraph_step.png")
+![preview_step](preview_histgraph_step.png)
 - [histgraph_poly.py](histgraph_poly.py) -> Script to graph input latency data with histgraph in poly mode  
-![preview_poly]("OW2 Frame Limiter RTSS vs in-game_histgraph_poly.png")
+![preview_poly](preview_histgraph_poly.png)
 
 ## requisite
 - csv file containing data on input latency with no headers and units, separated by line feeds
