@@ -61,4 +61,4 @@ ax.xaxis.label.set_color(backcolor)
 
 # save figure as figure.png with high resolution
 dir_path = os.path.dirname(os.path.realpath(__file__))
-plt.savefig(dir_path+"\\figure.png", dpi=200)
+plt.savefig(dir_path+"\\"+GraphTitle+"_violinplot.png", dpi=200)
