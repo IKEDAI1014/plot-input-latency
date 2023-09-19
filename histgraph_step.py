@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 # define variables
 data_list = []
 mergeddataset = []
-xticks_num = []
 filename_list = []
 var_list = ["data1","data2","data3","data4","data5","data6","data7","data8","data9","data10","data11","data12","data13",]
 backcolor = "#000000"
@@ -23,7 +22,6 @@ fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))
 
 # aggregate all csv data
 for i in range(len(fle)):
-    xticks_num.append(i)
     filename_list.append(os.path.basename(fle[i]))
     var_name = var_list[i]
     globals()[var_name] = pd.read_csv(fle[i],names=['Latency'])
