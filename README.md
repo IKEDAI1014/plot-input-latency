@@ -1,12 +1,12 @@
 # plot-input-latency
  Script to graph input latency data.
 
-Box-and-whisker plot (box plot) are commonly used, but while box plot can represent statistical values (Min, Q1, Q2, Q3, Max), box plot may not represent the scatter of the data correctly, especially if not unimodal distributions.
-While histogram and KDE (kernel density estimation) can represent the scatter of the data almost correctly, they are not suitable for comparing data as they do not represent statistical values.
+Box-and-whisker plot (box plot) are commonly used, but while box plot can represent statistical values (Min, Q1, Q2, Q3, Max), box plot can not represent scattering of the data correctly, especially if not unimodal distributions.
+While histogram and KDE (kernel density estimation) can represent scattering of the data almost correctly, they are not suitable for comparing data as they do not represent statistical values.
 
-Therefore, when creating a graph comparing data scatter, both the comparison criteria and the scatter of each piece of data must be represented visually correctly.
+Therefore, when creating a graph comparing spread of multiple data, both the comparison criteria and scattering of each data must be represented visually correctly.
 
-As violinplot is a fusion of KDE and boxplot, I recommend using violinplot as it represents both the statistical values and the scatter of the data.
+It is recommended to use violinplot, as violinplot is a complex of KDE and box plot.
 
 ## Contents
 - [violinplot.py](violinplot.py) -> Script to graph input latency data with violinplot  
