@@ -8,6 +8,8 @@
 ![preview_step](preview_histgraph_step.png)
 - [histgraph_poly.py](histgraph_poly.py) -> Script to graph input latency data with histgraph in poly mode  
 ![preview_poly](preview_histgraph_poly.png)
+- [kdeplot.py](kdeplot.py) -> Script to graph input latency data with kdeplot  
+![preview_kdeplot](preview_kdeplot.png)
 
 ## requisite
 - csv file containing data on input latency with no headers and units, separated by line feeds
@@ -23,4 +25,4 @@
 2. Install the module written above using `pip install pandas seaborn tk matplotlib`.
 3. run python file and select csv files.
 4. Enter GraphTitle and TestSetup,TestInfo.(ex "RawInput ON vs OFF" and "10900KF, 4000MHz16-17-17-35, 2080Ti" , "1000Try Each, DX12".
-5. plot.png is in the same folder as plot.py.
+5. $GraphTitle_plot.png is in the same folder as plot.py.

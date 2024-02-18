@@ -17,7 +17,7 @@ labelcolor = "#FFFFFF"
 gridcolor = "#1F1F1F"
 plotcolor = ["#FF0000","#00FF00","#0000FF","#FFFF00","#00FFFF","#FF00FF","#BFBFBF","#7F7F7F","#7F0000","#7F7F00","#007F00","#7F007F","#007F7F"]
 
-#select csv files with filedialog
+# select csv files with filedialog
 fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))
 
 # aggregate all csv data
@@ -25,9 +25,7 @@ for i in range(len(fle)):
     filename_list.append(os.path.basename(fle[i]))
     var_name = var_list[i]
     globals()[var_name] = pd.read_csv(fle[i],names=['Latency'])
-    exec("{}['testname'] = '{}'".format(var_name,os.path.splitext(os.path.basename(fle[i]))[0]))
     exec("data_list.append({})".format(var_name))
-mergedataset = pd.concat(data_list)
 
 # user input for GraphTitle
 GraphTitle = tkinter.simpledialog.askstring("Enter Graph Title", "Enter Graph Title")
@@ -44,10 +42,9 @@ fig = plt.figure(figsize=(14,7))
 ax = fig.add_subplot(111)
 
 # create plot
-plot = sb.histplot(data=mergedataset, hue='testname',x='Latency',bins=20, element="poly", legend=True)
-plot.legend_.set_title('')
-for text in plot.legend_.get_texts():
-    text.set_color(labelcolor)
+for i in range(len(fle)):
+    sb.kdeplot(data=data_list[i], x='Latency', label=filename_list[i])
+plt.legend(labelcolor=labelcolor)
 
 # custom figure title and ticks and label,spines
 fig.suptitle(GraphTitle,y=0.98,size=30,color=labelcolor)
@@ -62,4 +59,4 @@ ax.xaxis.label.set_color(labelcolor)
 
 # save figure as figure.png with high resolution
 dir_path = os.path.dirname(os.path.realpath(__file__))
-plt.savefig(dir_path+"\\"+GraphTitle+"_histgraph_poly.png", dpi=200)
+plt.savefig(dir_path+"\\"+GraphTitle+"_kdeplot.png", dpi=200)

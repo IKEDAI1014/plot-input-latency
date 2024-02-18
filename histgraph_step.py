@@ -25,7 +25,7 @@ for i in range(len(fle)):
     filename_list.append(os.path.basename(fle[i]))
     var_name = var_list[i]
     globals()[var_name] = pd.read_csv(fle[i],names=['Latency'])
-    exec("{}['filename'] = '{}'".format(var_name,os.path.basename(fle[i])))
+    exec("{}['testname'] = '{}'".format(var_name,os.path.splitext(os.path.basename(fle[i]))[0]))
     exec("data_list.append({})".format(var_name))
 mergedataset = pd.concat(data_list)
 
@@ -44,7 +44,10 @@ fig = plt.figure(figsize=(14,7))
 ax = fig.add_subplot(111)
 
 # create plot
-sb.histplot(data=mergedataset, hue='filename',x='Latency',bins=20, element="step", legend=False)
+plot = sb.histplot(data=mergedataset, x='Latency', hue='testname', bins=20, element="step", legend=True)
+plot.legend_.set_title('')
+for text in plot.legend_.get_texts():
+    text.set_color(labelcolor)
 
 # custom figure title and ticks and label,spines
 fig.suptitle(GraphTitle,y=0.98,size=30,color=labelcolor)
@@ -56,7 +59,6 @@ for b in ['top', 'bottom', 'left', 'right']:
 ax.set(ylabel="input latency [ms]")
 ax.yaxis.label.set_color(backcolor)
 ax.xaxis.label.set_color(labelcolor)
-plt.legend(title='', loc='upper left', labels=filename_list, labelcolor=labelcolor)
 
 # save figure as figure.png with high resolution
 dir_path = os.path.dirname(os.path.realpath(__file__))
