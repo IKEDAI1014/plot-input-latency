@@ -10,13 +10,13 @@ As violinplot is a fusion of KDE and boxplot, I recommend using violinplot as it
 
 ## Contents
 - [violinplot.py](violinplot.py) -> Script to graph input latency data with violinplot  
-![preview_violinplot](images\preview_violinplot.png)
+![preview_violinplot](images/preview_violinplot.png)
 - [histgraph_step.py](histgraph_step.py) -> Script to graph input latency data with histgraph in step mode  
-![preview_step](images\preview_histgraph_step.png)
+![preview_step](images/preview_histgraph_step.png)
 - [histgraph_poly.py](histgraph_poly.py) -> Script to graph input latency data with histgraph in poly mode  
-![preview_poly](images\preview_histgraph_poly.png)
+![preview_poly](images/preview_histgraph_poly.png)
 - [kdeplot.py](kdeplot.py) -> Script to graph input latency data with kdeplot  
-![preview_kdeplot](images\preview_kdeplot.png)
+![preview_kdeplot](images/preview_kdeplot.png)
 
 ## requisite
 - csv file containing data on input latency(ms) with no headers and units, separated by line feeds
