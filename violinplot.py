@@ -45,11 +45,14 @@ fig = plt.figure(figsize=(14,7))
 ax = fig.add_subplot(111)
 
 # create plot
-sb.violinplot(data=mergedataset, y='Latency', x='filename', inner='quart', cut=0, palette=sb.color_palette("tab10"))
+plot = sb.violinplot(data=mergedataset, y='Latency', hue='filename', inner='quart', cut=0, fill=False, legend=False)
+plot = sb.violinplot(data=mergedataset, y='Latency', hue='filename', inner='quart', cut=0, saturation=1, alpha=0.249, edgecolor='None')
+plot.legend_.set_title('')
+for text in plot.legend_.get_texts():
+    text.set_color(labelcolor)
 
 # custom figure title and ticks and label,spines
 fig.suptitle(GraphTitle,y=0.98,size=30,color=labelcolor)
-plt.xticks(xticks_num,filename_list,color=labelcolor)
 plt.yticks(color=labelcolor)
 ax.set_title("test setup : "+TestSetup+"\ntestinfo : "+TestInfo,color=labelcolor,size=9)
 for b in ['top', 'bottom', 'left', 'right']:
