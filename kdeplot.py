@@ -52,7 +52,7 @@ plt.yticks(color=backcolor)
 ax.set_title("test setup : "+TestSetup+"\ntestinfo : "+TestInfo,color=labelcolor,size=9)
 for b in ['top', 'bottom', 'left', 'right']:
     ax.spines[b].set_linewidth(0)
-ax.set(ylabel="input latency [ms]")
+ax.set(xlabel="input latency [ms]")
 ax.yaxis.label.set_color(backcolor)
 ax.xaxis.label.set_color(labelcolor)
 
