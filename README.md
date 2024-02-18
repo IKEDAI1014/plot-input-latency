@@ -1,8 +1,8 @@
 # plot-input-latency
  Script to graph input latency data.
 
-Box-and-whisker plots (boxplots) are commonly used, but while boxplots can represent statistical values (Min, Q1, Q2, Q3, Max), they may not represent the scatter of the data correctly, especially if the distribution is not normal.
-While histograms and KDE (kernel density estimation) can represent the scatter of the data almost correctly, they are not suitable for comparing data as they do not represent statistical values.
+Box-and-whisker plot (box plot) are commonly used, but while box plot can represent statistical values (Min, Q1, Q2, Q3, Max), box plot may not represent the scatter of the data correctly, especially if not unimodal distributions.
+While histogram and KDE (kernel density estimation) can represent the scatter of the data almost correctly, they are not suitable for comparing data as they do not represent statistical values.
 
 Therefore, when creating a graph comparing data scatter, both the comparison criteria and the scatter of each piece of data must be represented visually correctly.
 
