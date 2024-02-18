@@ -16,7 +16,6 @@ var_list = ["data1","data2","data3","data4","data5","data6","data7","data8","dat
 backcolor = "#000000"
 labelcolor = "#FFFFFF"
 gridcolor = "#1F1F1F"
-plotcolor = ["#FF0000","#00FF00","#0000FF","#FFFF00","#00FFFF","#FF00FF","#BFBFBF","#7F7F7F","#7F0000","#7F7F00","#007F00","#7F007F","#007F7F"]
 
 #select csv files with filedialog
 fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))
@@ -24,10 +23,10 @@ fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))
 # aggregate all csv data
 for i in range(len(fle)):
     xticks_num.append(i)
-    filename_list.append(os.path.basename(fle[i]))
+    filename_list.append(os.path.splitext(os.path.basename(fle[i]))[0])
     var_name = var_list[i]
     globals()[var_name] = pd.read_csv(fle[i],names=['Latency'])
-    exec("{}['filename'] = '{}'".format(var_name,os.path.basename(fle[i])))
+    exec("{}['filename'] = '{}'".format(var_name,os.path.splitext(os.path.basename(fle[i]))[0]))
     exec("data_list.append({})".format(var_name))
 mergedataset = pd.concat(data_list)
 
@@ -46,7 +45,7 @@ fig = plt.figure(figsize=(14,7))
 ax = fig.add_subplot(111)
 
 # create plot
-sb.violinplot(data=mergedataset,x='filename',y='Latency',palette=plotcolor,saturation=1, edgecolor='gray')
+sb.violinplot(data=mergedataset, y='Latency', x='filename', inner='quart', cut=0, palette=sb.color_palette("tab10"))
 
 # custom figure title and ticks and label,spines
 fig.suptitle(GraphTitle,y=0.98,size=30,color=labelcolor)

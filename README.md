@@ -1,18 +1,25 @@
 # plot-input-latency
- Script to graph input latency data
+ Script to graph input latency data.
+
+Box-and-whisker plots (boxplots) are commonly used, but while boxplots can represent statistical values (Min, Q1, Q2, Q3, Max), they may not represent the scatter of the data correctly, especially if the distribution is not normal.
+While histograms and KDE (kernel density estimation) can represent the scatter of the data almost correctly, they are not suitable for comparing data as they do not represent statistical values.
+
+Therefore, when creating a graph comparing data scatter, both the comparison criteria and the scatter of each piece of data must be represented visually correctly.
+
+As violinplot is a fusion of KDE and boxplot, I recommend using violinplot as it represents both the statistical values and the scatter of the data.
 
 ## Contents
 - [violinplot.py](violinplot.py) -> Script to graph input latency data with violinplot  
-![preview_violinplot](preview_violinplot.png)
+![preview_violinplot](images\preview_violinplot.png)
 - [histgraph_step.py](histgraph_step.py) -> Script to graph input latency data with histgraph in step mode  
-![preview_step](preview_histgraph_step.png)
+![preview_step](images\preview_histgraph_step.png)
 - [histgraph_poly.py](histgraph_poly.py) -> Script to graph input latency data with histgraph in poly mode  
-![preview_poly](preview_histgraph_poly.png)
+![preview_poly](images\preview_histgraph_poly.png)
 - [kdeplot.py](kdeplot.py) -> Script to graph input latency data with kdeplot  
-![preview_kdeplot](preview_kdeplot.png)
+![preview_kdeplot](images\preview_kdeplot.png)
 
 ## requisite
-- csv file containing data on input latency with no headers and units, separated by line feeds
+- csv file containing data on input latency(ms) with no headers and units, separated by line feeds
 - python3.8+
 - pandas module
 - seaborn module

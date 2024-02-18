@@ -15,14 +15,13 @@ var_list = ["data1","data2","data3","data4","data5","data6","data7","data8","dat
 backcolor = "#000000"
 labelcolor = "#FFFFFF"
 gridcolor = "#1F1F1F"
-plotcolor = ["#FF0000","#00FF00","#0000FF","#FFFF00","#00FFFF","#FF00FF","#BFBFBF","#7F7F7F","#7F0000","#7F7F00","#007F00","#7F007F","#007F7F"]
 
 # select csv files with filedialog
 fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))
 
 # aggregate all csv data
 for i in range(len(fle)):
-    filename_list.append(os.path.basename(fle[i]))
+    filename_list.append(os.path.splitext(os.path.basename(fle[i]))[0])
     var_name = var_list[i]
     globals()[var_name] = pd.read_csv(fle[i],names=['Latency'])
     exec("data_list.append({})".format(var_name))
@@ -43,7 +42,7 @@ ax = fig.add_subplot(111)
 
 # create plot
 for i in range(len(fle)):
-    sb.kdeplot(data=data_list[i], x='Latency', label=filename_list[i])
+    sb.kdeplot(data=data_list[i], x='Latency', label=filename_list[i], cut=0)
 plt.legend(labelcolor=labelcolor)
 
 # custom figure title and ticks and label,spines

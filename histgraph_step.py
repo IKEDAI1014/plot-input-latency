@@ -22,7 +22,6 @@ fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))
 
 # aggregate all csv data
 for i in range(len(fle)):
-    filename_list.append(os.path.basename(fle[i]))
     var_name = var_list[i]
     globals()[var_name] = pd.read_csv(fle[i],names=['Latency'])
     exec("{}['testname'] = '{}'".format(var_name,os.path.splitext(os.path.basename(fle[i]))[0]))
