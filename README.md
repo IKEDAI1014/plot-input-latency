@@ -3,7 +3,7 @@
  
  Visualisation of both,the statistical values and the scatter of multiple data, is necessary to create a graph that can compare the scatter of multiple data.  
 
- Box-and-whisker plot (box plot) are commonly used, but while box plot can represent statistical values (Min, Q1, Q2, Q3, Max), can not represent scattering of the data correctly, especially if not unimodal distributions.  
+ Box-and-whisker plot (box plot) are commonly used, but while box plot can represent statistical values (Min, Q1, Q2, Q3, Max), can not represent scattering of the data correctly, especially if not unimodal distributions<sup>[1](https://twitter.com/van__Oijen/status/1108435637277908992)</sup>.  
  While histogram and KDE (kernel density estimation) can represent scattering of the data almost correctly, can not represent statistical values.    
 
  I recommend to use violinplot, as violinplot is a complex of KDE and box plot.
