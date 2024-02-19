@@ -41,7 +41,7 @@ TestInfo = tkinter.simpledialog.askstring("Enter test info", "Enter additional t
 
 # custom figure color,create figure
 sb.set(rc={'axes.facecolor':backcolor, 'figure.facecolor':backcolor, 'grid.color': gridcolor})
-fig = plt.figure(figsize=(14,7))
+fig = plt.figure(figsize=(16,9))
 ax = fig.add_subplot(111)
 
 # create plot
@@ -63,4 +63,4 @@ ax.xaxis.label.set_color(backcolor)
 
 # save figure as figure.png with high resolution
 dir_path = os.path.dirname(os.path.realpath(__file__))
-plt.savefig(dir_path+"\\"+GraphTitle+"_violinplot.png", dpi=200)
+plt.savefig(dir_path+"\\"+GraphTitle+"_violinplot.png", dpi=120)
