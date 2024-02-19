@@ -9,6 +9,8 @@
  I recommend to use violinplot, as violinplot is a complex of KDE and box plot.
 
 ## Contents
+- [violinplot_KDElike.py](violinplot_KDElike.py) -> Script to graph input latency data with violinplot  
+![preview_violinplot_KDElike](images/preview_violinplot_KDElike.png)
 - [violinplot.py](violinplot.py) -> Script to graph input latency data with violinplot  
 ![preview_violinplot](images/preview_violinplot.png)
 - [kdeplot.py](kdeplot.py) -> Script to graph input latency data with kdeplot  
