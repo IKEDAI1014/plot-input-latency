@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 
 # define variables
 data_list = []
-mergeddataset = []
 xticks_num = []
 filename_list = []
 var_list = ["data1","data2","data3","data4","data5","data6","data7","data8","data9","data10","data11","data12","data13",]
