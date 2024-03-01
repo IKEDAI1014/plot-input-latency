@@ -9,13 +9,11 @@ import seaborn as sb
 
 # define variables
 data_list = []
-mergeddataset = []
 filename_list = []
 var_list = ["data1","data2","data3","data4","data5","data6","data7","data8","data9","data10","data11","data12","data13",]
 backcolor = "#000000"
 labelcolor = "#FFFFFF"
 gridcolor = "#1F1F1F"
-plotcolor = ["#FF0000","#00FF00","#0000FF","#FFFF00","#00FFFF","#FF00FF","#BFBFBF","#7F7F7F","#7F0000","#7F7F00","#007F00","#7F007F","#007F7F"]
 
 #select csv files with filedialog
 fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))

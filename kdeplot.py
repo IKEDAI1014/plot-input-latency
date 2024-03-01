@@ -9,7 +9,6 @@ import seaborn as sb
 
 # define variables
 data_list = []
-mergeddataset = []
 filename_list = []
 var_list = ["data1","data2","data3","data4","data5","data6","data7","data8","data9","data10","data11","data12","data13",]
 backcolor = "#000000"
