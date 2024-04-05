@@ -45,10 +45,16 @@ for i in range(len(fle)):
 plt.legend(labelcolor=labelcolor)
 
 # custom figure title and ticks and label,spines
-fig.suptitle(GraphTitle,y=0.98,size=30,color=labelcolor)
+if GraphTitle!="":
+    fig.suptitle(GraphTitle,y=0.98,size=30,color=labelcolor)
 plt.xticks(color=labelcolor)
 plt.yticks(color=backcolor)
-ax.set_title("test setup : "+TestSetup+"\ntestinfo : "+TestInfo,color=labelcolor,size=9)
+if TestSetup != "" and TestInfo != "":
+    ax.set_title("test setup : "+TestSetup+"\ntestinfo : "+TestInfo,color=labelcolor,size=9)
+elif TestSetup == "" and TestInfo != "":
+    ax.set_title("testinfo : "+TestInfo,color=labelcolor,size=15)
+elif TestSetup != "" and TestInfo == "":
+    ax.set_title("test setup : "+TestSetup,color=labelcolor,size=15)
 for b in ['top', 'bottom', 'left', 'right']:
     ax.spines[b].set_linewidth(0)
 ax.set(xlabel="input latency [ms]")
@@ -57,4 +63,15 @@ ax.xaxis.label.set_color(labelcolor)
 
 # save figure as figure.png with high resolution
 dir_path = os.path.dirname(os.path.realpath(__file__))
-plt.savefig(dir_path+"\\"+GraphTitle+"_kdeplot.png", dpi=120)
+if os.path.isdir(dir_path+"\\outputs")==False:
+    os.mkdir(dir_path+"\\outputs")
+if GraphTitle=="":
+    for i in range(1000):
+        if os.path.isfile(dir_path+"\\outputs\\"+"kdeplot"+str(i).zfill(4)+".png")==False:
+            plt.savefig(dir_path+"\\outputs\\"+"kdeplot"+str(i).zfill(4)+".png", dpi=120)
+            break
+else:
+    for i in range(1000):
+        if os.path.isfile(dir_path+"\\outputs\\"+GraphTitle+"_kdeplot"+str(i).zfill(4)+".png")==False:
+            plt.savefig(dir_path+"\\outputs\\"+GraphTitle+"_kdeplot"+str(i).zfill(4)+".png", dpi=120)
+            break
