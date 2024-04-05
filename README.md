@@ -25,13 +25,13 @@
 - python3.8+
 - pandas module
 - seaborn module
-- tkinter module
+- tkinter module(you have to install tkinter module with the optional feature of the python installer.)
 - matplotlib module
 - os module(This must already be installed)
 
-## Usage
-1. install python 3.8+.
-2. Install the module written above using `pip install pandas seaborn tk matplotlib`.
+## Usage(Windows)
+1. install python 3.8+ using [Python installer for Windows](https://www.python.org/downloads/windows/).(in Optional Features, you have to check tcl/tk and IDLE to install tkinter module)
+2. Install the module written above using `pip install pandas seaborn matplotlib`.
 3. run python file and select csv files.
 4. Enter GraphTitle and TestSetup,TestInfo.(ex "RawInput ON vs OFF" and "10900KF, 4000MHz16-17-35, 2080Ti" , "1000Try Each, DX12".
 5. $GraphTitle_plot.png is in the same folder as plot.py.
