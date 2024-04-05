@@ -69,11 +69,11 @@ if os.path.isdir(dir_path+"\\outputs")==False:
     os.mkdir(dir_path+"\\outputs")
 if GraphTitle=="":
     for i in range(1000):
-        if os.path.isfile(dir_path+"\\outputs\\"+"histgraph_poly"+str(i).zfill(4)+".png")==False:
-            plt.savefig(dir_path+"\\outputs\\"+"histgraph_poly"+str(i).zfill(4)+".png", dpi=120)
+        if os.path.isfile(dir_path+"\\outputs\\"+"histgraph_poly_"+str(i).zfill(4)+".png")==False:
+            plt.savefig(dir_path+"\\outputs\\"+"histgraph_poly_"+str(i).zfill(4)+".png", dpi=120)
             break
 else:
     for i in range(1000):
-        if os.path.isfile(dir_path+"\\outputs\\"+GraphTitle+"_histgraph_poly"+str(i).zfill(4)+".png")==False:
-            plt.savefig(dir_path+"\\outputs\\"+GraphTitle+"_histgraph_poly"+str(i).zfill(4)+".png", dpi=120)
+        if os.path.isfile(dir_path+"\\outputs\\"+GraphTitle+"_histgraph_poly_"+str(i).zfill(4)+".png")==False:
+            plt.savefig(dir_path+"\\outputs\\"+GraphTitle+"_histgraph_poly_"+str(i).zfill(4)+".png", dpi=120)
             break

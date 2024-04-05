@@ -73,11 +73,11 @@ if os.path.isdir(dir_path+"\\outputs")==False:
     os.mkdir(dir_path+"\\outputs")
 if GraphTitle=="":
     for i in range(1000):
-        if os.path.isfile(dir_path+"\\outputs\\"+"violinplot_KDElike"+str(i).zfill(4)+".png")==False:
-            plt.savefig(dir_path+"\\outputs\\"+"violinplot_KDElike"+str(i).zfill(4)+".png", dpi=120)
+        if os.path.isfile(dir_path+"\\outputs\\"+"violinplot_KDElike_"+str(i).zfill(4)+".png")==False:
+            plt.savefig(dir_path+"\\outputs\\"+"violinplot_KDElike_"+str(i).zfill(4)+".png", dpi=120)
             break
 else:
     for i in range(1000):
-        if os.path.isfile(dir_path+"\\outputs\\"+GraphTitle+"_violinplot_KDElike"+str(i).zfill(4)+".png")==False:
-            plt.savefig(dir_path+"\\outputs\\"+GraphTitle+"_violinplot_KDElike"+str(i).zfill(4)+".png", dpi=120)
+        if os.path.isfile(dir_path+"\\outputs\\"+GraphTitle+"_violinplot_KDElike_"+str(i).zfill(4)+".png")==False:
+            plt.savefig(dir_path+"\\outputs\\"+GraphTitle+"_violinplot_KDElike_"+str(i).zfill(4)+".png", dpi=120)
             break
