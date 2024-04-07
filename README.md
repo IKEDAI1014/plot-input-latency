@@ -29,7 +29,7 @@
 - matplotlib module
 - os module(This must already be installed)
 
-## Usage(Windows)
+## Installation and Usage(Windows)
 1. install python 3.8+ using [Python installer for Windows](https://www.python.org/downloads/windows/).(in Optional Features, you have to check tcl/tk and IDLE to install tkinter module)
 2. Install the module written above using `pip install pandas seaborn matplotlib`.
 3. run python file and select csv files.
