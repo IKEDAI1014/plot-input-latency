@@ -25,7 +25,7 @@
 - python3.8+
 - pandas module
 - seaborn module
-- tkinter module(you have to install tkinter module with the optional feature of the python installer.)
+- tkinter module(in Windows, you have to install tkinter module with the optional feature of the python installer.)
 - matplotlib module
 - os module(This must already be installed)
 

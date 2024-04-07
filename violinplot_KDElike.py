@@ -1,6 +1,7 @@
 # import modules
 import tkinter
 from tkinter import filedialog
+from tkinter import messagebox
 import tkinter.simpledialog
 import os
 import pandas as pd
@@ -18,6 +19,9 @@ gridcolor = "#1F1F1F"
 
 #select csv files with filedialog
 fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))
+if len(fle) == 0:
+    messagebox.showerror('Error', 'CSV file not selected, exit.')
+    exit()
 
 # aggregate all csv data
 for i in range(len(fle)):
@@ -31,12 +35,18 @@ mergedataset = pd.concat(data_list)
 
 # user input for GraphTitle
 GraphTitle = tkinter.simpledialog.askstring("Enter Graph Title", "Enter Graph Title")
+if isinstance(GraphTitle,str)==False:
+    GraphTitle = ""
 
 # user input for TestSetup
 TestSetup = tkinter.simpledialog.askstring("Enter your setup", "Enter your setup(ex CPU,GPU,monitor,OS,etc)")
+if isinstance(TestSetup,str)==False:
+    TestSetup = ""
 
 # user input for TestInfo
 TestInfo = tkinter.simpledialog.askstring("Enter test info", "Enter additional test info")
+if isinstance(TestInfo,str)==False:
+    TestInfo = ""
 
 # custom figure color,create figure
 sb.set(rc={'axes.facecolor':backcolor, 'figure.facecolor':backcolor, 'grid.color': gridcolor})
