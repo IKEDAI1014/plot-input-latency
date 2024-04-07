@@ -31,9 +31,11 @@
 - os module(This must already be installed)
 
 ## Installation and Usage(Windows)
-1. install python 3.8+ using [Python installer for Windows](https://www.python.org/downloads/windows/).(in Optional Features, you have to check tcl/tk and IDLE to install tkinter module)
-2. Install the module written above using below.(if you installed Microsoft Visual C++ Redistributable Package, you dont need msvc-runtime.)
-3. `pip install pandas seaborn matplotlib msvc-runtime`.
-4. run python file and select csv files.
-5. Enter GraphTitle and TestSetup,TestInfo.(if you left blank, it will be omitted)
-6. Plot image is in outputs folder.
+1. install python 3.8+ using [Python installer for Windows](https://www.python.org/downloads/windows/).
+   - (in Optional Features, you have to check tcl/tk and IDLE to install tkinter module)
+2. Install the module written above using below.
+   - `pip install pandas seaborn matplotlib msvc-runtime`.
+   - (if you installed Microsoft Visual C++ Redistributable Package, you dont need msvc-runtime.)
+3. run python file and select csv files.
+4. Enter GraphTitle and TestSetup,TestInfo.(if you left blank, it will be omitted)
+5. Plot image is in outputs folder.
