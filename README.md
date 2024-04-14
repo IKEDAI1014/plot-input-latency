@@ -7,6 +7,12 @@
  While histogram and KDE (kernel density estimation) can represent scattering of the data almost correctly, can not represent statistical values.    
 
  I recommend to use violinplot, as violinplot is a complex of KDE and box plot.
+## Features
+- Read CSV file, containing input latency, to create violinplot, kdeplot and histgraph images. (CSV file containing data on input latency (ms) with no headers and units, separated by line feeds).
+- In the input window you can enter a title for the graph, a description of the test and the test environment. These are added to the graph and make the graph more visible. (If left blank, they are omitted.)
+- Images are saved in the outputs folder. (If the outputs folder does not exist, it will be created automatically.)
+- Use the graph title and graph type as the file name when saving the image. This ensures that the contents of the graph can be understood from the file name alone.
+- Add a four-digit number to the end of the filename of the image. Avoid overwriting by changing the four-digit number when the same filename is used.
 
 ## Contents
 - [violinplot_KDElike.py](violinplot_KDElike.py) -> Script to graph input latency data with violinplot  
@@ -20,8 +26,9 @@
 - [histgraph_step.py](histgraph_step.py) -> Script to graph input latency data with histgraph in step mode  
 ![preview_step](outputs/preview_histgraph_step.png)
 
-## requisite
-- csv file containing data on input latency(ms) with no headers and units, separated by line feeds
+## Requirements
+- Windows OS(Vista or 8 or later, depending on Python version)
+- CSV file containing data on input latency(ms) with no headers and units, separated by line feeds
 - python3.8+
 - pandas module
 - seaborn module
@@ -35,7 +42,7 @@
    - (in Optional Features, you have to check tcl/tk and IDLE to install tkinter module)
 2. Run the below in CMD to install the required modules.
    - `pip install pandas seaborn matplotlib msvc-runtime`
-   - (if you installed Microsoft Visual C++ Redistributable Package, you dont need msvc-runtime.)
+   - (if you installed Microsoft Visual C++ Redistributable Package, you dont need msvc-runtime module.)
 3. run python file and select csv files.
 4. Enter GraphTitle and TestSetup,TestInfo.(if you left blank, it will be omitted)
 5. Plot image is in outputs folder.
