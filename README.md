@@ -8,7 +8,7 @@
 
  I recommend to use violinplot, as violinplot is a complex of KDE and box plot.
 ## Features
-- Read CSV file, containing input latency, to create violinplot, kdeplot and histgraph images. (CSV file containing data on input latency (ms) with no headers and units, separated by line feeds).
+- Read CSV file to create violinplot, kdeplot and histgraph images. (CSV file containing data on input latency (ms) with no headers and units, separated by line feeds).
 - In the input window you can enter a title for the graph, a description of the test and the test environment. These are added to the graph and make the graph more visible. (If left blank, they are omitted.)
 - Images are saved in the outputs folder. (If the outputs folder does not exist, it will be created automatically.)
 - Use the graph title and graph type as the file name when saving the image. This ensures that the contents of the graph can be understood from the file name alone.
