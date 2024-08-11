@@ -12,7 +12,7 @@
 - In the input window you can enter a title for the graph, a description of the test and the test environment. These are added to the graph and make the graph more visible. (If left blank, they are omitted.)
 - Images are saved in the outputs folder. (If the outputs folder does not exist, it will be created automatically.)
 - Use the graph title and graph type as the file name when saving the image. This ensures that the contents of the graph can be understood from the file name alone.
-- Add a four-digit number to the end of the filename of the image. Avoid overwriting by changing the four-digit number when the same filename is used.
+- Automatically append a four-digit number to the end of the filename of the image. If the same file name exists, the 4-digit number is changed to avoid overwriting.
 
 ## Contents
 - [violinplot_KDElike.py](violinplot_KDElike.py) -> Script to graph input latency data with violinplot  
