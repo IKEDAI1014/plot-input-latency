@@ -3,7 +3,7 @@
 
  In order to create graphs for comparing multiple data, it is necessary to visualise both the statistics and the dispersion of the data.
 
- Box plots are commonly used because they show statistics such as the minimum, first quartile (Q1), median (Q2), third quartile (Q3), and maximum. However, they do not accurately represent the dispersion of the data, especially for non-unimodal distributions.(<sup>[1](https://web.archive.org/web/20240413161312/https://blog.bioturing.com/2018/05/16/5-reasons-you-should-use-a-violin-graph/)</sup>, <sup>[2](https://twitter.com/van__Oijen/status/1108435637277908992)</sup>)
+ Box plots are commonly used because they show statistics such as the minimum, first quartile (Q1), median (Q2), third quartile (Q3), and maximum. However, they do not accurately represent the dispersion of the data, especially for non-unimodal distributions.<sup>([1](https://web.archive.org/web/20240413161312/https://blog.bioturing.com/2018/05/16/5-reasons-you-should-use-a-violin-graph/), [2](https://www.research.autodesk.com/publications/same-stats-different-graphs/), [3](https://twitter.com/van__Oijen/status/1108435637277908992))</sup>
  ![show_box_violin](outputs/BoxViolin.gif)
  (Source: autodeskresearch.com)
 
