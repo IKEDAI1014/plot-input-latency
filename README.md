@@ -1,18 +1,22 @@
 # plot-input-latency
- Script to graph input latency data.    
- 
- Visualisation of both,the statistical values and the scatter of multiple data, is necessary to create a graph that can compare the scatter of multiple data.  
+ This script generates a graph to visualise input latency data.
 
- box plot are commonly used, but while box plot can represent statistical values (Min, Q1, Q2, Q3, Max), can not represent scattering of the data correctly, especially if not unimodal distributions<sup>[1](https://twitter.com/van__Oijen/status/1108435637277908992)</sup>.  
- While histogram and KDE (kernel density estimation) can represent scattering of the data almost correctly, can not represent statistical values.    
+ In order to create graphs for comparing multiple data, it is necessary to visualise both the statistics and the dispersion of the data.
 
- I recommend to use violinplot, as violinplot is a complex of KDE and box plot.
+ Box plots are commonly used because they show statistics such as the minimum, first quartile (Q1), median (Q2), third quartile (Q3), and maximum. However, they do not accurately represent the dispersion of the data, especially for non-unimodal distributions.(<sup>[1](https://web.archive.org/web/20240413161312/https://blog.bioturing.com/2018/05/16/5-reasons-you-should-use-a-violin-graph/)</sup>, <sup>[2](https://twitter.com/van__Oijen/status/1108435637277908992)</sup>)
+ ![show_box_violin](outputs/BoxViolin.gif)
+ (Source: autodeskresearch.com)
+
+ Histograms and Kernel Density Estimation (KDE) effectively illustrate the dispersion of the data, but do not provide statistics.
+
+ To take advantage of both approaches, I recommend using a violin plot, which combines the benefits of KDE and box plots.
+
 ## Features
 - Read CSV file to create violinplot, kdeplot and histgraph images. (CSV file containing data on input latency (ms) with no headers and units, separated by line feeds).
 - In the input window you can enter a title for the graph, a description of the test and the test environment. These are added to the graph and make the graph more visible. (If left blank, they are omitted.)
 - Images are saved in the outputs folder. (If the outputs folder does not exist, it will be created automatically.)
 - Use the graph title and graph type as the file name when saving the image. This ensures that the contents of the graph can be understood from the file name alone.
-- Automatically append a four-digit number to the end of the filename of the image. If the same file name exists, the 4-digit number is changed to avoid overwriting.
+- Automatically append a 4-digit number to the end of the filename of the image. If the same file name exists, the 4-digit number is changed to avoid overwriting.
 
 ## Contents
 - [violinplot_KDElike.py](violinplot_KDElike.py) -> Script to graph input latency data with violinplot  
