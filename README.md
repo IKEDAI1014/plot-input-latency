@@ -19,16 +19,12 @@
 - Automatically append a 4-digit number to the end of the filename of the image. If the same file name exists, the 4-digit number is changed to avoid overwriting.
 
 ## Contents
+- [violinplot_KDElike_inde.py](violinplot_KDElike_inde.py) -> Script to graph input latency data with violinplot  
+![preview_violinplot_KDElike_inde](outputs/preview_violinplot_KDElike_inde.png)
 - [violinplot_KDElike.py](violinplot_KDElike.py) -> Script to graph input latency data with violinplot  
 ![preview_violinplot_KDElike](outputs/preview_violinplot_KDElike.png)
 - [violinplot.py](violinplot.py) -> Script to graph input latency data with violinplot  
 ![preview_violinplot](outputs/preview_violinplot.png)
-- [kdeplot.py](kdeplot.py) -> Script to graph input latency data with kdeplot  
-![preview_kdeplot](outputs/preview_kdeplot.png)
-- [histgraph_poly.py](histgraph_poly.py) -> Script to graph input latency data with histgraph in poly mode  
-![preview_poly](outputs/preview_histgraph_poly.png)
-- [histgraph_step.py](histgraph_step.py) -> Script to graph input latency data with histgraph in step mode  
-![preview_step](outputs/preview_histgraph_step.png)
 
 ## Requirements
 - Windows OS(Vista or 8 or later, depending on Python version)
