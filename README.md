@@ -19,11 +19,11 @@
 - Automatically append a 4-digit number to the end of the filename of the image. If the same file name exists, the 4-digit number is changed to avoid overwriting.
 
 ## Contents
-- [violinplot_KDElike_inde.py](violinplot_KDElike_inde.py) -> Script to graph input latency data with violinplot  
+- [violinplot_KDElike_inde.py](violinplot_KDElike_inde.py) -> Script for violinplot with split(good for 3 or more files)  
 ![preview_violinplot_KDElike_inde](outputs/preview_violinplot_KDElike_inde.png)
-- [violinplot_KDElike.py](violinplot_KDElike.py) -> Script to graph input latency data with violinplot  
+- [violinplot_KDElike.py](violinplot_KDElike.py) -> Script for violinplot with split, overlap(good for 2 files)  
 ![preview_violinplot_KDElike](outputs/preview_violinplot_KDElike.png)
-- [violinplot.py](violinplot.py) -> Script to graph input latency data with violinplot  
+- [violinplot.py](violinplot.py) -> Script for violinplot  
 ![preview_violinplot](outputs/preview_violinplot.png)
 
 ## Requirements
