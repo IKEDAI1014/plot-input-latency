@@ -22,6 +22,9 @@ fle = list(filedialog.askopenfilenames(filetypes=[('csv file','.csv')]))
 if len(fle) == 0:
     messagebox.showerror('Error', 'CSV file not selected, exit.')
     exit()
+elif len(fle) > 13:
+    messagebox.showerror('Error', 'too many CSV files please use less than 14, exit.')
+    exit()
 
 # aggregate all csv data
 for i in range(len(fle)):
@@ -31,7 +34,6 @@ for i in range(len(fle)):
     globals()[var_name] = pd.read_csv(fle[i],names=['Latency'])
     exec("{}['filename'] = '{}'".format(var_name,os.path.splitext(os.path.basename(fle[i]))[0]))
     exec("data_list.append({})".format(var_name))
-mergedataset = pd.concat(data_list)
 
 # user input for GraphTitle
 GraphTitle = tkinter.simpledialog.askstring("Enter Graph Title", "Enter Graph Title")
@@ -54,8 +56,8 @@ fig = plt.figure(figsize=(16,9))
 ax = fig.add_subplot(111)
 
 # create plot
-plot = sb.violinplot(data=mergedataset, y='Latency', hue='filename', inner='quart', cut=0, fill=False, legend=False)
-plot = sb.violinplot(data=mergedataset, y='Latency', hue='filename', inner='quart', cut=0, saturation=1, alpha=0.249, edgecolor='None')
+for i in range(len(fle)):
+    plot = sb.violinplot(data=data_list[i], y='Latency', x='filename', label=filename_list[i], inner='quart', cut=0, saturation=1, alpha=None, edgecolor=sb.color_palette("tab10")[i]+(1,), dodge=False, split=False, color=sb.color_palette("tab10")[i]+(0.249,))
 plot.legend_.set_title('')
 for text in plot.legend_.get_texts():
     text.set_color(labelcolor)
@@ -64,6 +66,7 @@ for text in plot.legend_.get_texts():
 if GraphTitle!="":
     fig.suptitle(GraphTitle,y=0.98,size=30,color=labelcolor)
 plt.yticks(color=labelcolor)
+plt.xticks(color=backcolor)
 if TestSetup != "" and TestInfo != "":
     ax.set_title("test setup : "+TestSetup+"\ntestinfo : "+TestInfo,color=labelcolor,size=9)
 elif TestSetup == "" and TestInfo != "":
